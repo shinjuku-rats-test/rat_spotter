@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新宿おネズミホウコクチュー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="title-screen" class="screen active">
+            <h1 class="title-text">新宿おネズミ<br>ホウコクチュー<br>(仮)</h1>
+            <div class="mascot-container">
+                <img src="rat.png" alt="マスコットのネズミ" class="mascot-rat">
+            </div>
+            <button id="start-button" class="btn">Start</button>
+        </div>
+
+        <div id="home-screen" class="screen">
+            <header class="header">
+                <button class="menu-icon">&#9776;</button>
+                <div class="home-button">
+                    <img src="home-icon.png" alt="ホームアイコン">
+                    <span>ホーム</span>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="speech-bubble">
+                    <p>今日は何匹<br>見つけられるかな</p>
+                </div>
+                <div class="weather-icon">
+                    <img src="rain-cloud.png" alt="雨雲">
+                </div>
+                <div class="rats-display">
+                    <img src="rat.png" alt="ネズミ" class="rat-img">
+                    <img src="rat.png" alt="ネズミ" class="rat-img">
+                </div>
+                <button id="report-start-button" class="btn">ホウコク開始</button>
+            </main>
+            <nav class="menu-bar">
+                <button class="menu-item" id="camera-btn"><img src="camera-icon.png" alt="カメラ"></button>
+                <button class="menu-item" id="map-btn"><img src="map-icon.png" alt="マップ"></button>
+                <button class="menu-item active" id="home-btn"><img src="home-icon.png" alt="ホーム"></button>
+                <button class="menu-item" id="reports-btn"><img src="book-icon.png" alt="レポート"></button>
+                <button class="menu-item" id="profile-btn"><img src="profile-icon.png" alt="プロフィール"></button>
+            </nav>
+        </div>
+
+        <div id="camera-screen" class="screen">
+            <h2>写真で報告</h2>
+            <video id="video" width="320" height="240" autoplay></video>
+            <button id="snap" class="btn">写真を撮る</button>
+            <canvas id="canvas" width="320" height="240"></canvas>
+            <button id="upload-photo" class="btn">アップロード</button>
+            <button class="back-button btn">戻る</button>
+        </div>
+
+        <div id="map-screen" class="screen">
+            <h2>マップで報告</h2>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+            <button id="report-location-btn" class="btn">この場所を報告</button>
+            <button class="back-button btn">戻る</button>
+        </div>
+
+        <div id="reports-screen" class="screen">
+            <h2>これまでの報告</h2>
+            <ul id="report-list">
+                <!-- 報告がここに追加されます -->
+            </ul>
+            <button class="back-button btn">戻る</button>
+        </div>
+
+        <div id="profile-screen" class="screen">
+            <h2>プロフィール</h2>
+            <p>ユーザー名: <span id="display-username">名無し</span></p>
+            <button id="edit-username-btn" class="btn">ユーザー名を変更</button>
+            <p>アイコン: <img id="display-icon" src="default-profile-icon.png" alt="アイコン" width="50" height="50"></p>
+            <input type="file" id="upload-icon" accept="image/*" style="display: none;">
+            <button id="change-icon-btn" class="btn">アイコンを変更</button>
+            <p>現在のポイント: <span id="display-points">0</span> pt</p>
+            <button class="back-button btn">戻る</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
