@@ -236,14 +236,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Google Maps APIのスクリプトを動的に読み込む（APIキーが必要）
     // `<YOUR_API_KEY>` を実際のGoogle Maps JavaScript APIキーに置き換えてください
-    const googleMapsApiKey = 'YOUR_API_KEY';
-    if (googleMapsApiKey !== 'YOUR_API_KEY') {
-        const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`;
-        script.async = true;
-        document.head.appendChild(script);
-    } else {
-        console.warn('Google Maps APIキーが設定されていません。マップ機能は動作しません。');
-        alert('Google Maps APIキーを設定してください。');
+    //const googleMapsApiKey = 'YOUR_API_KEY';
+    //if (googleMapsApiKey !== 'YOUR_API_KEY') {
+    //    const script = document.createElement('script');
+    //    script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`;
+    //    script.async = true;
+    //    document.head.appendChild(script);
+    //} else {
+    //    console.warn('Google Maps APIキーが設定されていません。マップ機能は動作しません。');
+    //    alert('Google Maps APIキーを設定してください。');
     }
 });
