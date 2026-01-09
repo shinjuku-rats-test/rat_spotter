@@ -8,12 +8,22 @@
 </head>
 <body>
     <div id="app">
+        <!-- index.html の title-screen 部分 -->
         <div id="title-screen" class="screen active">
-            <h1 class="title-text">新宿ネズミ<br>報告アプリ</h1>
+            <h1 class="title-text">新宿おネズミ<br>ホウコクチュー<br>(仮)</h1>
             <div class="mascot-container">
                 <img src="rat.png" alt="マスコットのネズミ" class="mascot-rat">
             </div>
-            <button id="start-button" class="btn">Start</button>
+            
+            <!-- ボタン類をまとめるコンテナを追加するとレイアウトしやすいです -->
+            <div class="title-buttons">
+                <button id="start-button" class="btn">Start</button>
+                <br>
+                <!-- アンケートリンクを追加 -->
+                <a href="https://forms.gle/XXXXX" target="_blank" class="survey-link">
+                    アンケートで応援する！
+                </a>
+            </div>
         </div>
 
         <div id="home-screen" class="screen">
