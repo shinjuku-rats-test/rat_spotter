@@ -297,6 +297,39 @@ body {
     object-fit: cover;
 }
 
+/* style.css の最後の方に追加 */
+
+.title-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* ボタンとリンクの間隔 */
+}
+
+.survey-link {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 5px 15px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px #333;
+    transition: all 0.1s;
+}
+
+.survey-link:hover {
+    background-color: #ffffa6; /* ホバー時に少し黄色く */
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #333;
+}
+
+/* 小さな矢印アイコンなどを前後に付けても可愛いです */
+.survey-link::before {
+    content: "▶ ";
+    font-size: 10px;
+}
+
 /* その他のスタイル */
 /* 必要に応じてピクセルアート風のフォントを読み込む */
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
